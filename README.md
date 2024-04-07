@@ -33,48 +33,38 @@ APIs facilitate the exchange of data between customers, partners, and employees,
 Stage three builds upon the previous stage by investigating how the application's components communicate together. The objective here is to review how the application works and how security controls are currently implemented. This can be illustrated by the use of a data flow diagram that shows how a typical search request passes through multiple layers. One thing you might review here would be to ensure the MySQL database is using prepared statements when queries are input.
 
 <p align="center">
-Sample data flow : <br/>
-<img src="https://i.imgur.com/a/RyVqYFH.png" height="80%" width="80%" alt="Apply the PASA Threat Model Framework"/>
-<br />
+Sample data flow diagram: <br/>
+<img src="https://imgur.com/ZjihJ5f.png"/><br />
 
 <h2>Stage IV: Threat analysis</h2>
+The primary objective of this stage is to consider the types of threats that might affect the company's mobile application such as:
+
+- <b>Injection</b>
+- <b>Session hijacking</b>
+
+Injection attacks are common for SQL databases. Session hijacking is also possible because the mobile application communicates cookies between multiple layers. It's important to consider the technological attack surface and any relevant threats in order to effectively implement one's information security responsibilities.
 
 <h2>Stage V: Vulnerability analysis</h2>
 
+The objective here is to identify what is wrong with the design of the mobile application or its codebase based on one's security testing. 2 vulnerabilities that can be exploited are: 
+
+- <b>Lack of prepared statements</b>
+- <b>Broken API token</b>
+
+As previously mentioned, a lack of prepared statements can make the SQL database vulnerable to injection attacks. And session hijacking is possible if cookies are mishandled between input and output sources.
+
 <h2>Stage VI: Attack modeling</h2>
+
+In this stage, the objective is to link the threats and vulnerabilities identified in the previous steps using attack trees in order to illustrate the potential threats that have been identified are actually viable.  
+
+<p align="center">
+Sample attack tree diagram: <br/>
+<img src="https://imgur.com/bqwNdod.png"/><br />
+
+This sample attack tree models how user data is vulnerable to the attacks that were identified earlier. Like the sample data flow diagram, an actual attack tree for a mobile application would be much more complex than this.
 
 <h2>Stage VII: Risk analysis and impact</h2>
 
-<h2>Program walk-through:</h2>
-
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
 
 <!--
  ```diff
