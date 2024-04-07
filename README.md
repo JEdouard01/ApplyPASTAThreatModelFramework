@@ -9,7 +9,7 @@ The Process of Attack Simulation and Threat Analysis (PASTA) is a risk-centric t
 
 
 <h2>Stage I: Define business and security objectives</h2>
-All shopping applications need to process payments. As such, certain technologies are required to keep information private and secure as well as be in compliant with PCI-DSS. Accordingly, the DevSecOps team will have to analyze the following requirements: 
+All shopping applications obviously need to process payments. As such, certain technologies are required to keep information private and secure as well as be in compliant with PCI-DSS. Accordingly, the DevSecOps team will have to analyze the following requirements: 
 
 - <b>Users can create member profiles internally or by connecting external accounts.</b>
 - <b>The app must process financial transactions.</b>
