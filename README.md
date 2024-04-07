@@ -65,6 +65,8 @@ This sample attack tree models how user data is vulnerable to the attacks that w
 
 <h2>Stage VII: Risk analysis and impact</h2>
 
+The objective of the final stage of PASTA is to identify ways to mitigate the risks that were identified from stages IV - VI and plan for any remaining risks that can't be remediated. For instance, SHA-256, incident response procedures, password policy, and principle of least privilege are a few examples of technical, operational, and managerial controls that can be implemented before the launch of the mobile application to reduce risk.
+
 
 <!--
  ```diff
