@@ -11,14 +11,31 @@ The Process of Attack Simulation and Threat Analysis (PASTA) is a risk-centric t
 <h2>Stage I: Define business and security objectives</h2>
 All shopping applications need to process payments. As such, certain technologies are required to keep information private and secure as well as be in compliant with PCI-DSS. Accordingly, the DevSecOps team will have to analyze the following requirements: 
 
-- <b>Users can create member profiles internally or by
-connecting external accounts.</b>
+- <b>Users can create member profiles internally or by connecting external accounts.</b>
 - <b>The app must process financial transactions.</b>
 - <b>The app should be in compliance with PCI-DSS.</b>
 
 <h2>Stage II: Define the technical scope</h2>
+At this stage, the objective is to understand the attack surface by identifying the technologies being used by the application and understanding their dependencies. 
+
+
+<h3>The technologies being used by the application are the following:</h3> 
+
+- <b>Application programming interface (API)</b>
+- <b>Public key infrastructure (PKI)</b>
+- <b>SHA-256</b>
+- <b>SQL</b>
+
+APIs facilitate the exchange of data between customers, partners, and employees, so they should be prioritized. They handle a lot of sensitive data while they connect various users and systems together. However, details such as which APIs are being used should be considered before prioritizing one technology over another. So, they can be more prone to security vulnerabilities because there’s a larger attack surface.
 
 <h2>Stage III: Decompose the application</h2>
+
+Stage three builds upon the previous stage by investigating how the application's components communicate together. The objective here is to review how the application works and how security controls are currently implemented. This can be illustrated by the use of a data flow diagram that shows how a typical search request passes through multiple layers. One thing you might review here would be to ensure the MySQL database is using prepared statements when queries are input.
+
+<p align="center">
+Sample data flow : <br/>
+<img src="https://i.imgur.com/a/RyVqYFH.png" height="80%" width="80%" alt="Apply the PASA Threat Model Framework"/>
+<br />
 
 <h2>Stage IV: Threat analysis</h2>
 
